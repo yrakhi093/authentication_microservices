@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "start": "node testfile3.mjs",
+    "start": "node testfile3.js",
     "build": "npm install"
   },
   "dependencies": {
