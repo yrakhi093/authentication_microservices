@@ -1,6 +1,7 @@
 
 
 import inquirer from 'inquirer';
+import express from 'express';
 import dotenv from 'dotenv';
 import { registerUser } from './lib/auth2.js';
 import { loginUser } from './lib/auth2.js';
@@ -8,6 +9,15 @@ import mongoose from 'mongoose';
 
 dotenv.config()
 let url = process.env.MONGO_URL
+
+const app = express()
+
+const PORT = process.env.PORT || 3000;
+
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 
 mongoose
   .connect(
